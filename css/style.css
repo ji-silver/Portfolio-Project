@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: #111;
+    transition: 0.5s;
+}
+
+.show {
+    right: 300px;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    position: relative;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.toggle_menu {
+    position: relative;
+    align-items: center;
+    cursor: pointer;
+    font-size: 35px;
+    color: #fff;
+    z-index: 10;
+}
+
+.toggle_close  {
+    position: relative;
+    align-items: center;
+    cursor: pointer;
+    font-size: 35px;
+    color: #fff;
+    z-index: 10;
+}
+
+.close {
+    display: none;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, #00f, #f00);
+    mix-blend-mode: overlay;
+    opacity: 50%;
+}
+
+.text {
+    position: relative;
+    z-index: 10;
+}
+
+.title {
+    font-size: 6em;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1em;
+}
+
+.sub_title {
+    font-size: 4em;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+.desc {
+    position: relative;
+    font-size: 1.1em;
+    margin: 20px 0;
+    font-weight: 300;
+    max-width: 700px;
+    color: #fff;
+}
+
+.home_btn {
+    display: inline-block;
+    font-size: 1.1em;
+    background: #fff;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 10px;
+    color: #111;
+    letter-spacing: 2px;
+}
+
+.sci {
+    position: absolute;
+    z-index: 10;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    display: inline-block;
+    color: #fff;
+    margin-right: 20px;
+    font-size: 1.3em;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+
+.nav_list {
+    position: relative;
+}
+
+.nav_item {
+    position: relative;
+    text-align: center;
+}
+
+.nav_link {
+    font-size: 24px;
+    color: #111;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 991px) {
+    section, header {
+        padding: 40px;
+    }
+
+    .title {
+        font-size: 3em;
+    }
+
+    .sub_title {
+        font-size: 2em;
+    }
+}
