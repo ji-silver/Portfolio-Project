@@ -78,6 +78,7 @@ header {
     display: none;
 }
 
+
 video {
     position: absolute;
     top: 0;
@@ -128,48 +129,64 @@ video {
 }
 
 /* button */
-.button {
-    display: block;
-    position: relative;
-    z-index: 1;
-    background: none;
-    overflow: hidden;
+.btn {
     text-transform: uppercase;
+    background: none;
     cursor: pointer;
+    letter-spacing: 1px;
+	font-weight: 700;
+    position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+	transition: all 0.3s;
 }
 
-.button::before {
-    content: '';
-	z-index: -1;
+.btn:hover {
+    background-color: rgba(101, 78, 163, 0.3);
+}
+
+.btn:active {
+    border-color: #654EA3;
+	color: #654EA3;
+}
+
+.btn:after {
+	content: '';
 	position: absolute;
-	top: 50%;
-	left: 100%;
-	margin: -15px 0 0 1px;
-	width: 30px;
-	height: 30px;
-	border-radius: 50%;
-    background: #654EA3;
-    opacity: 60%;
-	transform-origin: 100% 50%;
-	transform: scale3d(1, 2, 1);
-	transition: transform 0.3s, opacity 0.3s;
-	transition-timing-function: cubic-bezier(0.7,0,0.9,1);
-}
-
-.button:hover::before {
-	transform: scale3d(9, 9, 1);
+	z-index: -1;
+	transition: all 0.3s;
 }
 
 .start_btn {
-    border: 1px solid #fff;
+    margin-top: 10px;
+    padding: 25px 60px;
+    border: 2px solid #fff;
     color: #fff;
-    font-weight: 700;
-    font-size: 1.1em;
-    padding: 1em 2em;
 }
 
-.start {
-    padding-left: 0.75em;
+.start_btn:before {
+	position: absolute;
+	height: 100%;
+    font-size: 125%;
+    left: 130%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	color: #fff;
+    transition: all 0.3s;
+}
+
+.start_btn:active:before {
+	color: #654EA3;
+}
+
+.start_btn:hover:before {
+	left: 80%;
+}
+
+.bx-right-arrow-alt:before {
+    content: "\eb43";
 }
 
 .sci {
@@ -220,13 +237,18 @@ video {
     font-weight: 500;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 760px) {
     section, header {
         padding: 40px;
     }
 
     .sub_logo {
         display: none;
+    }
+
+    .text {
+        width: 100%;
+        text-align: center;
     }
 
     .title {
@@ -238,10 +260,10 @@ video {
     }
 
     .desc {
-        font-size: 1em;
+        display: none;
     }
 
-    .start {
-        font-size: 0.8em;
+    .start_btn {
+        margin-top: 20px;
     }
 }
