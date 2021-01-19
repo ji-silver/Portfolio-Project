@@ -293,10 +293,10 @@ header.show .nav_list{
 }
 
 @media screen and (max-width: 760px) {
-    section, header {
+    .index, header {
         padding: 40px;
     }
-
+    
     .sub_logo {
         display: none;
     }
@@ -444,4 +444,16 @@ header.show .nav_list{
     line-height: 1.4;
     text-transform: uppercase;
     font-weight: 500;
+}
+
+@media screen and (max-width: 960px) {
+    .login {
+        padding: 15px;
+        margin: 0 auto;
+    }
+
+    .login_form {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
 }
