@@ -13,33 +13,22 @@
 
 <body>
     <section class="section login">
-        <div class="form">
-            <form class="login_form">
-                <span class="login_title">login</span>
-                <div class="wrap_input" data-validate="아이디를 입력해주세요">
-                    <input class="input" type="text" placeholder="username">
-                    <!-- <span class="focus_input"></span> -->
-                </div>
-
-                <div class="wrap_input" data-validate="아이디를 입력해주세요">
-                    <input class="input" type="password" placeholder="password">
-                    <!-- <span class="focus_input"></span> -->
-                </div>
-
-                <div class="container">
-                    <button class="btn login_btn">login</button>
-                </div>
-
-                <div class="login_txt">
-                    <span class="message">Not a member?</span>
-                    <a href="#" class="sign">Sign up</a>
+        <header>
+            <!-- <a href="index.html" class="back"><i class='bx bx-chevron-left bx-flip-vertical' ></i></a> -->
+        </header>
+        <div class="container-login">
+            <form class="login-form">
+                <span class="login-form__title">login</span>
+                <input class="login-form__input" type="text" placeholder="아이디">
+                <input class="login-form__input" type="password" placeholder="비밀번호">
+                <button class="btn login-form__btn">로그인</button>
+                <div class="login-form__desc">
+                    <span>Not a member?</span>
+                    <a href="#">가입하기</a>
                 </div>
             </form>
-
         </div>
-
     </section>
-    
 </body>
 
 </html>

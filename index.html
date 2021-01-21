@@ -14,29 +14,29 @@
 <body>
     <section class="section index">
         <header id="header">
-            <h2 class="logo">SWWU<span class="sub_logo"> 미용예술과</span></h2>
-            <ul class="nav_list">
-                <li class="nav_item"><a href="#" class="nav_link active">Home</a></li>
-                <li class="nav_item">
-                    <a href="#" class="nav_link">2018</a>
+            <h2 class="logo">SWWU<span class="sublogo"> 미용예술과</span></h2>
+            <ul class="nav">
+                <li class="nav__item"><a href="#" class="nav__link active">Home</a></li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">2018</a>
                     <!-- <ul class="submenu">
-                        <li class="nav_item">
-                            <a href="#" class="nav_link">dkdk</a>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">dkdk</a>
                         </li>
-                        <li class="nav_item">
-                            <a href="#" class="nav_link">dkdk</a>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">dkdk</a>
                         </li>
                     </ul> -->
                 </li>
-                <li class="nav_item"><a href="#" class="nav_link">2017</a></li>
-                <li class="nav_item"><a href="#" class="nav_link">About</a></li>
-                <li class="nav_item"><a href="login.html" class="nav_link">Login</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">2017</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="login.html" class="nav__link">Login</a></li>
             </ul>
 
-            <div class="toggle" id="toggle-menu">
-                <div class="line-menu half start"></div>
-                <div class="line-menu"></div>
-                <div class="line-menu half end"></div>
+            <div class="toggle" id="toggle">
+                <div class="toggle__menu half start"></div>
+                <div class="toggle__menu"></div>
+                <div class="toggle__menu half end"></div>
             </div>
         </header>
 
@@ -44,19 +44,19 @@
             <video src="img/video2.mp4" type="video.mp4" muted autoplay loop playsinline></video>
         </div>
         <div class="overlay"></div>
-        <div class="text">
-            <h2 class="title">2018</h2>
-            <h3 class="sub_title">미용예술과 exhibition</h3>
-            <p class="desc"><strong>제 26주년 수원여자대학교 미용예술과 졸업작품전</strong>을 찾아와주신 모든 분들께 감사의 말씀을 전합니다.
+        <div class="main-text">
+            <h2 class="main-text__title">2018</h2>
+            <h3 class="main-text__sub">미용예술과 exhibition</h3>
+            <p class="main-text__desc"><strong>제 26주년 수원여자대학교 미용예술과 졸업작품전</strong>을 찾아와주신 모든 분들께 감사의 말씀을 전합니다.
                 사회에 첫 발을 들이는 미용예술과 학생들에게 많은 응원과 격려 부탁드리겠습니다.</p>
-            <button class="btn start_btn bx bx-right-arrow-alt">get started</button>
+            <button class="btn main-text__btn bx bx-right-arrow-alt">get started</button>
         </div>
         <div class="sci">
-            <a href="https://ko-kr.facebook.com/1969swc/" target="_blank" class="sci_icon"><i
+            <a href="https://ko-kr.facebook.com/1969swc/" target="_blank" class="sci__icon"><i
                     class='bx bxl-facebook'></i></a>
-            <a href="https://www.instagram.com/suwonwu1969/?hl=ko" target="_blank" class="sci_icon"><i
+            <a href="https://www.instagram.com/suwonwu1969/?hl=ko" target="_blank" class="sci__icon"><i
                     class='bx bxl-instagram'></i></a>
-            <a href="https://www.youtube.com/channel/UCNMhrO-YyX1FWawonzV66MA" target="_blank" class="sci_icon"><i
+            <a href="https://www.youtube.com/channel/UCNMhrO-YyX1FWawonzV66MA" target="_blank" class="sci__icon"><i
                     class='bx bxl-youtube'></i></a>
         </div>
     </section>
@@ -66,10 +66,10 @@
 
     <script>
         gsap.from('header', {opacity: 0, duration: 1, delay:1, y: -30})
-        gsap.from('.title', {opacity: 0, duration: 1.3, delay:1.3, y: -50})
-        gsap.from('.sub_title', {opacity: 0, duration: 1.3, delay:1.4, y: -50})
-        gsap.from('.desc', {opacity: 0, duration: 1, delay:1.5, y: 50})
-        gsap.from('.btn', {opacity: 0, duration: 1, delay: 1.6, y: 30})
+        gsap.from('.main-text__title', {opacity: 0, duration: 1.3, delay:1.3, y: -50})
+        gsap.from('.main-text__sub', {opacity: 0, duration: 1.3, delay:1.4, y: -50})
+        gsap.from('.main-text__desc', {opacity: 0, duration: 1, delay:1.5, y: 50})
+        gsap.from('.main-text__btn', {opacity: 0, duration: 1, delay: 1.6, y: 30})
         gsap.from('.sci', {opacity: 0, duration: 1.3, delay:1.9, x: 50})
     </script>
 </body>
