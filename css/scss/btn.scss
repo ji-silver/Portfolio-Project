@@ -1,0 +1,30 @@
+.btn {
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 1px;
+	font-weight: 700;
+    position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+    transition: all 0.3s;
+    
+    &:hover {
+        background-color: rgba(101, 78, 163, 0.3);
+    }
+
+    &::active {
+        border-color: #654EA3;
+        color: #654EA3;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        transition: all 0.3s;
+    }
+}
+
+.bx-right-arrow-alt::before {
+    content: "\eb43";
+}
