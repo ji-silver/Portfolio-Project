@@ -33,6 +33,24 @@
   content: "\eb43";
 }
 
+/* Color */
+:root {
+  --nav-bg: transparent;
+  --logo: #fff;
+  --nav-link-color: #fff;
+  --nav-link-line: #fff;
+  --nav-button: #fff;
+}
+
+/* Dark Color */
+body.dark-color {
+  --nav-bg: #fff;
+  --logo: #000;
+  --nav-link-color: #000;
+  --nav-link-line: #000;
+  --nav-button: #000;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -79,6 +97,7 @@ section {
   margin: 0 auto;
 }
 
+/*========== NAV ==========*/
 header {
   position: fixed;
   top: 0;
@@ -93,12 +112,14 @@ header {
           justify-content: space-between;
   padding: 0px 100px;
   z-index: 1000;
-  -webkit-transition: 0.5s, opacity 0.5s;
-  transition: 0.5s, opacity 0.5s;
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
 }
 
 header.sticky {
-  background: #fff;
+  background: var(--nav-bg);
 }
 
 .logo-wrapper {
@@ -114,14 +135,10 @@ header.sticky {
 }
 
 .logo {
-  color: #fff;
+  color: var(--logo);
   cursor: pointer;
   font-size: 23px;
   font-weight: 700;
-}
-
-.black-tit {
-  color: #000 !important;
 }
 
 .nav {
@@ -140,7 +157,7 @@ header.sticky {
   text-transform: uppercase;
   margin: 0.5em 1em;
   padding-bottom: 1px;
-  color: #fff;
+  color: var(--nav-link-color);
   font-weight: 300;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
@@ -153,7 +170,7 @@ header.sticky {
   bottom: 0;
   width: 100%;
   height: 0.5px;
-  background: #fff;
+  background: var(--nav-link-line);
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transition: -webkit-transform 0.5s ease;
@@ -167,14 +184,7 @@ header.sticky {
           transform: scaleX(1);
 }
 
-.black-c {
-  color: #000 !important;
-}
-
-.black-c::before {
-  background-color: #000 !important;
-}
-
+/* Nave menu button */
 .menu-btn {
   position: relative;
   display: none;
@@ -192,7 +202,7 @@ header.sticky {
 .menu-btn__lines, .menu-btn__lines::after, .menu-btn__lines::before {
   width: 1.5rem;
   height: 0.1rem;
-  background-color: #fff;
+  background-color: var(--nav-button);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -221,28 +231,16 @@ header.sticky {
 .menu-btn.open .menu-btn__lines::before {
   -webkit-transform: rotate(45deg) translate(-1.5rem, 1.5rem);
           transform: rotate(45deg) translate(-1.5rem, 1.5rem);
-  background-color: #fff;
+  background-color: #000;
 }
 
 .menu-btn.open .menu-btn__lines::after {
   -webkit-transform: rotate(-45deg) translate(-1.5rem, -1.5rem);
           transform: rotate(-45deg) translate(-1.5rem, -1.5rem);
-  background-color: #fff;
+  background-color: #000;
 }
 
-.black-bg {
-  background-color: #000 !important;
-}
-
-.black-bg::after, .black-bg::before {
-  background-color: #000 !important;
-}
-
-.menu-btn.open .black-bg::after, .menu-btn.open .black-bg::before {
-  background-color: #fff !important;
-}
-
-/* INDEX */
+/*========== INDEX ==========*/
 .index {
   min-height: 100vh;
   position: relative;
@@ -379,7 +377,7 @@ video {
   transition: 0.5s;
 }
 
-/* LOGIN */
+/*========== LOGIN ==========*/
 .login {
   background: #fff;
   min-height: 100vh;
@@ -491,7 +489,7 @@ video {
   font-weight: 500;
 }
 
-/* 2018 */
+/*========== 2018 ==========*/
 .header {
   position: relative;
   height: 50vh;
@@ -676,7 +674,7 @@ video {
         -ms-flex-pack: center;
             justify-content: center;
     text-align: center;
-    background: #000;
+    background: #fff;
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
     -webkit-transform: translateX(100vw);
@@ -690,16 +688,13 @@ video {
     padding: 1em 0;
   }
   .nav__link {
-    color: #fff;
+    color: #000;
     margin: 5px 0;
     font-weight: 900;
     font-size: 3em;
   }
-  .black-c {
-    color: #fff !important;
-  }
-  .black-c::before {
-    background-color: #fff !important;
+  .nav__link::before {
+    background: #000;
   }
   .login-form {
     padding-right: 15px;
