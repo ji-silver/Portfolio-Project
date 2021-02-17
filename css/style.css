@@ -1,38 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Sarpanch:900");
-.btn {
-  text-transform: uppercase;
-  cursor: pointer;
-  letter-spacing: 1px;
-  font-weight: 700;
-  position: relative;
-  border-radius: 50px;
-  overflow: hidden;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.btn:hover {
-  background-color: rgba(101, 78, 163, 0.3);
-}
-
-.btn::active {
-  border-color: #654EA3;
-  color: #654EA3;
-}
-
-.btn::after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.bx-right-arrow-alt::before {
-  content: "\eb43";
-}
-
 /* Color */
 :root {
   --nav-bg: transparent;
@@ -310,43 +277,37 @@ video {
   color: #fff;
 }
 
-.main-text__btn {
+.main-text__button {
+  width: 200px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
   margin-top: 10px;
-  padding: 25px 60px;
-  background: none;
-  border: 2px solid #fff;
+  height: 55px;
+  text-align: center;
+  background-size: 200% 100%;
+  border-radius: 50px;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  background-image: -webkit-gradient(linear, left top, right top, from(#654EA3), color-stop(#904EA3), color-stop(#A34E8C), to(#A34E62));
+  background-image: linear-gradient(to right, #654EA3, #904EA3, #A34E8C, #A34E62);
+  -webkit-box-shadow: 0 4px 15px 0 rgba(88, 87, 92, 0.75);
+          box-shadow: 0 4px 15px 0 rgba(88, 87, 92, 0.75);
 }
 
-.main-text__btn a {
+.main-text__button:hover {
+  background-position: 100% 0;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.main-text__button:focus {
+  outline: none;
+}
+
+.main-text__button a {
   color: #fff;
-}
-
-.main-text__btn::before {
-  position: absolute;
-  height: 100%;
-  font-size: 125%;
-  left: 130%;
-  top: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: #fff;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.main-text__btn:active::before {
-  color: #654EA3;
-}
-
-.main-text__btn:hover::before {
-  left: 80%;
+  padding: 10px;
 }
 
 .sci {
@@ -379,8 +340,11 @@ video {
 
 /*========== LOGIN ==========*/
 .login {
-  background: #fff;
+  position: relative;
+  width: 100%;
   min-height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#654EA3), to(#3d88a7));
+  background: linear-gradient(to bottom, #654EA3, #3d88a7);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -392,101 +356,141 @@ video {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
 }
 
 .login-container {
-  width: 500px;
+  width: 450px;
   background: #fff;
-  border-radius: 20px;
+  border-radius: 3px;
   overflow: hidden;
-  -webkit-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  padding: 70px 50px 30px;
 }
 
 .login-form {
   width: 100%;
-  position: relative;
-  padding: 178px 55px 0 55px;
-}
-
-.login-form__title {
-  font-size: 30px;
-  line-height: 1.2;
-  text-align: center;
-  display: block;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  color: #fff;
-  font-weight: 700;
-  text-transform: uppercase;
-  background-color: #654EA3;
-  padding-top: 50px;
-  padding-bottom: 39px;
-}
-
-.login-form__input {
-  position: relative;
-  width: 100%;
-  height: 55px;
-  display: block;
-  font-size: 15px;
-  line-height: 1.2;
-  background: #ebebeb;
-  border-radius: 50px;
-  margin-bottom: 16px;
-  padding: 0 35px;
-}
-
-.login-form__btn {
-  width: 100%;
-  height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0 35px;
-  background: #fff;
-  border: 1px solid #654EA3;
-  font-size: 15px;
-  line-height: 1.2;
 }
 
-.login-form__desc {
+.login-form-title {
+  width: 100%;
+  font-size: 30px;
+  color: #000;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.input-wrap {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  margin-bottom: 15px;
+}
+
+.input-wrap__input {
+  display: block;
+  font-size: 18px;
+  color: #686868;
+  background: #e6e6e6;
+  width: 100%;
+  height: 62px;
+  padding: 0 30px 0 65px;
+  border-radius: 3px;
+}
+
+.input-wrap__symbol {
+  position: absolute;
+  font-size: 24px;
+  color: #686868;
+  width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 80px 0 30px 0;
+  padding-left: 23px;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  -webkit-transition: all .4s;
+  transition: all .4s;
 }
 
-.login-form__desc span {
-  font-size: 15px;
-  color: #999;
-  line-height: 1.4;
-  padding-bottom: 5px;
+.input-wrap__focus {
+  display: block;
+  position: absolute;
+  border-radius: 3px;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: 0 0 0 0;
+          box-shadow: 0 0 0 0;
+  color: rgba(107, 92, 151, 0.6);
 }
 
-.login-form__desc a {
+.input-wrap__input:focus + .input-wrap__focus {
+  -webkit-animation: anim-shadow 0.5s ease-in-out forwards;
+          animation: anim-shadow 0.5s ease-in-out forwards;
+}
+
+.input-wrap__input:focus + .input-wrap__focus + .input-wrap__symbol {
   color: #654EA3;
-  line-height: 1.4;
-  text-transform: uppercase;
+  padding-left: 18px;
+}
+
+@-webkit-keyframes anim-shadow {
+  to {
+    -webkit-box-shadow: 0px 0px 60px 20px;
+            box-shadow: 0px 0px 60px 20px;
+    opacity: 0;
+  }
+}
+
+@keyframes anim-shadow {
+  to {
+    -webkit-box-shadow: 0px 0px 60px 20px;
+            box-shadow: 0px 0px 60px 20px;
+    opacity: 0;
+  }
+}
+
+.login-form-btn {
+  width: 100%;
+  height: 62px;
+  margin-top: 20px;
+  font-size: 16px;
   font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 3px;
+  background: #654EA3;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.login-form-btn:hover {
+  cursor: pointer;
+  background: #58575c;
+}
+
+.login-form-desc {
+  width: 100%;
+  padding: 30px 0 20px;
+  color: #999;
+  text-align: center;
+}
+
+.login-form-desc span {
+  border-bottom: 1px solid #999;
 }
 
 /*========== 2018 ==========*/
@@ -649,7 +653,7 @@ video {
   .main-text__desc {
     display: none;
   }
-  .main-text__btn {
+  .main-text__button {
     margin-top: 20px;
   }
   .menu-btn {
@@ -696,9 +700,19 @@ video {
   .nav__link::before {
     background: #000;
   }
-  .login-form {
+  .login-container {
     padding-right: 15px;
     padding-left: 15px;
+  }
+  .input-wrap__input {
+    font-size: 15px;
+    padding: 0 23px 0 55px;
+  }
+  .input-wrap__symbol {
+    font-size: 20px;
+  }
+  .login-form-desc {
+    font-size: 12px;
   }
   .card {
     -webkit-transform: translateY(0);

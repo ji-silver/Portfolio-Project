@@ -1,5 +1,5 @@
-const header = document.getElementById('header');
-const menuBtn = document.querySelector('.menu-btn');
+const header = document.getElementById('header')
+const menuBtn = document.querySelector('.menu-btn')
 const nav = document.querySelector('.nav')
 
 menuBtn.addEventListener('click', () => {

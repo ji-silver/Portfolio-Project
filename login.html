@@ -12,17 +12,29 @@
 </head>
 
 <body>
-    <section class="section login">
+    <section class="login">
         <div class="login-container">
             <form class="login-form">
-                <span class="login-form__title">login</span>
-                <input class="login-form__input" type="text" placeholder="아이디">
-                <input class="login-form__input" type="password" placeholder="비밀번호">
-                <button class="btn login-form__btn">로그인</button>
-                <div class="login-form__desc">
-                    <span>Not a member?</span>
-                    <a href="#">가입하기</a>
+                <span class="login-form-title">login</span>
+                <div class="input-wrap">
+                    <input class="input-wrap__input" type="text" name="username" placeholder="아이디">
+                    <span class="input-wrap__focus"></span>
+                    <span class="input-wrap__symbol">
+                        <i class='bx bx-user'></i>
+                    </span>
                 </div>
+
+                <div class="input-wrap">
+                    <input class="input-wrap__input" type="password" name="password" placeholder="비밀번호">
+                    <span class="input-wrap__focus"></span>
+                    <span class="input-wrap__symbol">
+                        <i class='bx bx-lock-alt'></i>
+                    </span>
+                </div>
+
+                <button class="login-form-btn">login</button>
+
+                <p class="login-form-desc"><span>수원여자대학교 미용예술과</span> 재학생과 <br>관리자만 로그인이 가능합니다.</p>
             </form>
         </div>
     </section>
