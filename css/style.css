@@ -77,12 +77,13 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0px 100px;
   z-index: 1000;
-  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
-  transition: opacity 0.5s, -webkit-transform 0.5s;
-  transition: transform 0.5s, opacity 0.5s;
-  transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+  -webkit-transition: 0.5s, opacity 0.5s;
+  transition: 0.5s, opacity 0.5s;
 }
 
 header.sticky {
@@ -279,8 +280,8 @@ video {
 
 .main-text__button {
   width: 200px;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
   cursor: pointer;
   margin-top: 10px;
   height: 55px;
@@ -291,8 +292,6 @@ video {
   transition: all .4s ease-in-out;
   background-image: -webkit-gradient(linear, left top, right top, from(#654EA3), color-stop(#904EA3), color-stop(#A34E8C), to(#A34E62));
   background-image: linear-gradient(to right, #654EA3, #904EA3, #A34E8C, #A34E62);
-  -webkit-box-shadow: 0 4px 15px 0 rgba(88, 87, 92, 0.75);
-          box-shadow: 0 4px 15px 0 rgba(88, 87, 92, 0.75);
 }
 
 .main-text__button:hover {
@@ -358,8 +357,42 @@ video {
           align-items: center;
 }
 
+.login-header {
+  position: relative;
+  width: 100%;
+  padding: 0;
+}
+
+.back-btn {
+  display: none;
+  position: relative;
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.back-btn::after, .back-btn::before {
+  position: absolute;
+  content: "";
+  width: 1.5rem;
+  height: 0.1rem;
+  background-color: #fff;
+}
+
+.back-btn::after {
+  -webkit-transform: rotate(-45deg) scale(0.7, 1);
+          transform: rotate(-45deg) scale(0.7, 1);
+  top: 5.5px;
+}
+
+.back-btn::before {
+  -webkit-transform: rotate(45deg) scale(0.7, 1);
+          transform: rotate(45deg) scale(0.7, 1);
+  bottom: 5.5px;
+}
+
 .login-container {
-  width: 450px;
+  max-width: 450px;
   background: #fff;
   border-radius: 3px;
   overflow: hidden;
@@ -626,6 +659,9 @@ video {
     padding: 0 30px;
     margin: 0 auto;
   }
+  .sticky {
+    height: 60px;
+  }
   .header {
     margin-top: 0;
     height: 0;
@@ -700,9 +736,14 @@ video {
   .nav__link::before {
     background: #000;
   }
+  .back-btn {
+    display: block;
+  }
   .login-container {
+    margin-top: 80px;
     padding-right: 15px;
     padding-left: 15px;
+    height: 490px;
   }
   .input-wrap__input {
     font-size: 15px;

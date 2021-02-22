@@ -70,9 +70,10 @@ header {
     height: 80px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0px 100px;
     z-index: 1000;
-    transition: transform 0.5s, opacity 0.5s;
+    transition: 0.5s, opacity 0.5s;
 
     &.sticky {
         background: var(--nav-bg);
@@ -238,8 +239,8 @@ video {
 
     &__button {
         width: 200px;
-        font-size: 16px;
-        font-weight: 600;
+        font-size: 14px;
+        text-transform: uppercase;
         cursor: pointer;
         margin-top: 10px;
         height: 55px;
@@ -248,7 +249,6 @@ video {
         border-radius: 50px;
         transition: all .4s ease-in-out;
         background-image: linear-gradient(to right,  $main-color, #904EA3, #A34E8C, #A34E62);
-        box-shadow: 0 4px 15px 0 rgba(88, 87, 92, 0.75);
 
         &:hover {
             background-position: 100% 0;
@@ -288,6 +288,7 @@ video {
 }
 
 /*========== LOGIN ==========*/
+
 .login {
     position: relative;
     width: 100%;
@@ -299,8 +300,41 @@ video {
     align-items: center;
 }
 
+.login-header {
+    position: relative;
+    width: 100%;
+    padding: 0;
+}
+
+.back-btn {
+    display: none;
+    position: relative;
+    cursor: pointer;
+    width: 1.5rem;
+    height: 1.5rem;
+
+    &::after,
+    &::before {
+        position: absolute;
+        content: "";
+        width: 1.5rem;
+        height: 0.1rem;
+        background-color: #fff;
+    }
+
+    &::after {
+        transform: rotate(-45deg)scale(0.7, 1);
+        top: 5.5px;
+    }
+
+    &::before {
+        transform: rotate(45deg)scale(0.7, 1);
+        bottom: 5.5px;
+    }
+}
+
 .login-container {
-    width: 450px;
+    max-width: 450px;
     background: #fff;
     border-radius: 3px;
     overflow: hidden;
@@ -369,7 +403,7 @@ video {
     }
 
     &__input:focus + &__focus {
-        animation: anim-shadow 0.5s ease-in-out forwards;
+        animation: anim-shadow 0.5s ease-in-out forwards; // forwards 상태유지
     }
 
     &__input:focus + &__focus + &__symbol {
@@ -377,18 +411,11 @@ video {
         padding-left: 18px;
     }
 }
-
-@-webkit-keyframes anim-shadow {
-    to {
-      box-shadow: 0px 0px 60px 20px;
-      opacity: 0;
-    }
-  }
   
   @keyframes anim-shadow {
     to {
-      box-shadow: 0px 0px 60px 20px;
-      opacity: 0;
+      box-shadow: 0px 0px 60px 20px; // x y 블러값 확산값
+      opacity: 0; // 없어지게 만들기
     }
   }
 
@@ -539,6 +566,10 @@ video {
         margin: 0 auto;
     }
 
+    .sticky {
+        height: 60px;
+    }
+
     .header {
         margin-top: 0;
         height: 0;
@@ -616,9 +647,15 @@ video {
         }
     }
 
+    .back-btn {
+        display: block;
+    }
+
     .login-container {
+        margin-top: 80px;
         padding-right: 15px;
         padding-left: 15px;
+        height: 490px;
     }
 
     .input-wrap__input {
