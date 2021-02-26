@@ -259,7 +259,7 @@ video {
             outline: none;
         }
 
-        & a {
+        a {
             color: #fff;
             padding: 10px;
         }
@@ -284,6 +284,94 @@ video {
             color: $main-color;
             transition: 0.5s;
         }
+    }
+}
+
+/*========== ABOUT ==========*/
+.about-content {
+    min-height: 100vh;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-container {
+    position: relative;
+    max-width: 100%;
+    height: 250px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.pr-card {
+    position: relative;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+    width: 200px;
+    height: 200px;
+    background: #A34E62;
+    background-size: cover;
+    overflow: hidden;
+    text-align: center;
+    transition: all ease 0.3s;
+    
+    &.color1 {
+        background: #8CA34E;
+    }
+    
+    &.color2 {
+        background: #4EA38F;
+    }
+    
+    &__img {
+        border-radius: 50%;
+        margin: 20px auto;
+        display: block;
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+    }
+
+    &__name {
+        position: relative;
+        color: #fff;
+        font-size: 22px;
+        font-weight: 500;
+        display: inline-block;
+    }
+
+    &__desc {
+        color: #fff;
+        font-size: 14px;
+        font-weight: normal;
+    }
+}
+
+.profile-container .pr-card:hover {
+    border-radius: 5px;
+    width: 300px;
+    height: 300px;
+}
+
+.video-container {
+    position: relative;
+    height: 0;
+    margin-bottom: 50px;
+    padding-bottom: 56.25%;
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -443,7 +531,7 @@ video {
     color: #999;
     text-align: center;
 
-    & span {
+    span {
         border-bottom: 1px solid #999;
     }
 }
@@ -677,5 +765,9 @@ video {
 
     .content__desc {
         display: none;
+    }
+
+    .profile {
+        flex-direction: column;
     }
 }

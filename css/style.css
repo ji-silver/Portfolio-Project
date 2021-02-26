@@ -337,6 +337,109 @@ video {
   transition: 0.5s;
 }
 
+/*========== ABOUT ==========*/
+.about-content {
+  min-height: 100vh;
+}
+
+.profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile-container {
+  position: relative;
+  max-width: 100%;
+  height: 250px;
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.pr-card {
+  position: relative;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+  width: 200px;
+  height: 200px;
+  background: #A34E62;
+  background-size: cover;
+  overflow: hidden;
+  text-align: center;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.pr-card.color1 {
+  background: #8CA34E;
+}
+
+.pr-card.color2 {
+  background: #4EA38F;
+}
+
+.pr-card__img {
+  border-radius: 50%;
+  margin: 20px auto;
+  display: block;
+  width: 160px;
+  height: 160px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.pr-card__name {
+  position: relative;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.pr-card__desc {
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.profile-container .pr-card:hover {
+  border-radius: 5px;
+  width: 300px;
+  height: 300px;
+}
+
+.video-container {
+  position: relative;
+  height: 0;
+  margin-bottom: 50px;
+  padding-bottom: 56.25%;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /*========== LOGIN ==========*/
 .login {
   position: relative;
@@ -761,5 +864,11 @@ video {
   }
   .content__desc {
     display: none;
+  }
+  .profile {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
